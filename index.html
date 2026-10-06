@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FATTO - Al Forno - </title>
+  
+  <meta name="description" content="FATTO Al Forno - Pizzería gourmet artesanal en Concepción del Uruguay. Pizzas a la piedra, empanadas marcadas a fuego, tartas individuales y salsas exclusivas. ¡Hacé tu pedido directo en Pedix!">
+  <meta property="og:title" content="FATTO - Al Forno - | Pizzas, Tartas y Empanadas">
+  <meta property="og:description" content="Velocidad, Calidad y Gourmet! 🔥🍽️✨ Hacé tu pedido online en Pedix y disfrutá del auténtico sabor al horno.">
+  <meta property="og:image" content="media/logo.jpg">
+  <meta property="og:type" content="restaurant">
+  
+  <link rel="icon" type="image/jpeg" href="media/logo.jpg">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Marquee -->
+  <div class="top-bar">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>🔥 AL HORNO ES MÁS RICO</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥟 +28 VARIEDADES DE EMPANADAS RELLENAS</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🍕 PIZZAS A LA PIEDRA CON MUZZARELLA REAL</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥧 TARTAS INDIVIDUALES HOJALDRADAS E INTEGRALES</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🛵 PEDIDOS EXCLUSIVOS POR PEDIX: PEDIX.APP/FATTO-AL-FORNO</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥫 8 DIPS & SALSAS EXCLUSIVAS PARA DIPPEAR</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>📍 CONCEPCIÓN DEL URUGUAY, ENTRE RÍOS</span><span class="dot"></span></div>
+      
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="marquee-item"><span>🔥 AL HORNO ES MÁS RICO</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥟 +28 VARIEDADES DE EMPANADAS RELLENAS</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🍕 PIZZAS A LA PIEDRA CON MUZZARELLA REAL</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥧 TARTAS INDIVIDUALES E INTEGRALES</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🛵 PEDIDOS EXCLUSIVOS POR PEDIX: PEDIX.APP/FATTO-AL-FORNO</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>🥫 8 DIPS EXCLUSIVOS PARA DIPPEAR</span><span class="dot"></span></div>
+      <div class="marquee-item"><span>📍 9 DE JULIO 787, CONCEPCIÓN DEL URUGUAY, ENTRE RÍOS</span><span class="dot"></span></div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo-wrap" aria-label="FATTO Al Forno - Inicio">
+        <div class="brand-text-logo">
+          <span class="brand-title logo-main neon-glow-white">FATTO</span>
+          <span class="brand-script logo-sub neon-glow-red">- Al Forno -</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Menú principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#especialidades" class="nav-link">Especialidades</a>
+        <a href="#menu-completo" class="nav-link">Carta Completa</a>
+        <a href="#salsas" class="nav-link">Salsas & Dips</a>
+        <a href="#local" class="nav-link">Nuestro Local</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://pedix.app/fatto-al-forno" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-header-pedix"
+           title="Hacer pedido en Pedix">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span>Pedir Online</span>
+        </a>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav" id="mobile-nav">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-text-logo">
+          <span class="brand-title logo-main" style="font-size: 1.6rem;">FATTO</span>
+          <span class="brand-script logo-sub" style="font-size: 1.1rem;">- Al Forno -</span>
+        </div>
+        <button class="mobile-nav-close" id="close-mobile-nav" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#inicio">Inicio <span>→</span></a>
+        <a href="#especialidades">Especialidades <span>→</span></a>
+        <a href="#menu-completo">Carta Completa <span>→</span></a>
+        <a href="#salsas">Salsas & Dips <span>→</span></a>
+        <a href="#local">Nuestro Local <span>→</span></a>
+        <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer">Pedir en Pedix <span>↗</span></a>
+      </nav>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 30px;">
+      <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-primary" style="justify-content: center; width: 100%;">
+        Hacer Pedido en Pedix
+      </a>
+      <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center;">
+        Concepción del Uruguay, Entre Ríos<br>
+        Consultas WhatsApp: 3442 330423
+      </p>
+    </div>
+  </aside>
+
+  <!-- Hero Section with Canvas Oven Embers -->
+  <section class="hero" id="inicio">
+    <canvas id="fire-canvas"></canvas>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="fire-icon">🔥</span>
+          <span>Horno Artesanal</span>
+          <span class="pill-highlight">Gourmet & Veloz</span>
+        </div>
+
+        <h1 class="hero-title">
+          Masa al punto, fuego justo,
+          <span class="title-accent">sabor</span>
+          <span class="script-accent">- Al Forno -</span>
+        </h1>
+
+        <p class="hero-description">
+          Pizzas a la piedra con bordes dorados, empanadas premium rellenas de verdad marcadas con su variedad, y tartas individuales artesanales recién horneadas. Pedí online directamente en nuestro portal de Pedix.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://pedix.app/fatto-al-forno" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-primary">
+            <span>Pedir Online en Pedix</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+          </a>
+
+          <a href="#menu-completo" class="btn-secondary">
+            <span>Explorar la Carta</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">28+</span>
+            <span class="stat-label">Variedades de Empanadas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">23</span>
+            <span class="stat-label">Estilos de Pizzas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Dips Artesanales</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Hero Media Card with Neon Reflection -->
+      <div class="hero-visual">
+        <div class="hero-card-3d">
+          <div class="hero-image-wrap">
+            <img src="media/Logo y empanada.jpg" alt="Empanada rellena al horno FATTO con cartel neón">
+            <div class="hero-image-gradient"></div>
+          </div>
+          <div class="hero-card-info">
+            <span class="card-tag">Relleno Real</span>
+            <h3 class="brand-title">Bondiola Desmechada</h3>
+            <p>Jugosa, tierna, dorada y con el sello auténtico FATTO.</p>
+          </div>
+        </div>
+
+        <!-- Floating Badges -->
+        <div class="floating-pill top-right">
+          <div class="pill-icon-circle">
+            <span>🥟</span>
+          </div>
+          <div class="pill-text">
+            <strong>Marcadas a Fuego</strong>
+            <span>Cada sabor identificado</span>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks / Features Bar -->
+  <section class="perks-section">
+    <div class="container">
+      <div class="perks-grid">
+        <div class="perk-card">
+          <div class="perk-icon-wrap">🔥</div>
+          <div class="perk-info">
+            <h4>100% Al Forno</h4>
+            <p>Cocción a alta temperatura que garantiza masas crujientes, secas y sin frituras pesadas.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-wrap">🥩</div>
+          <div class="perk-info">
+            <h4>Relleno Abundante</h4>
+            <p>Carne al cuchillo tierna, bondiola braseada BBQ, panceta crocante y quesos de primera.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-wrap">🥫</div>
+          <div class="perk-info">
+            <h4>El Secreto del Dip</h4>
+            <p>Elegí entre nuestras 8 salsas caseras para sumergir cada empanada y porción de pizza.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-wrap">🛵</div>
+          <div class="perk-info">
+            <h4>Pedidos por Pedix</h4>
+            <p>Catálogo digital ágil y directo para coordinar tu entrega rápida y segura en minutos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Pillars: Empanadas, Pizzas, Tartas -->
+  <section class="featured-section" id="especialidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestras Especialidades</span>
+        <h2 class="section-title">Hechas con pasión, servidas calientes</h2>
+        <p class="section-subtitle">
+          Tres grandes pasiones de la gastronomía de horno, perfeccionadas con ingredientes seleccionados y recetas de autor.
+        </p>
+      </div>
+
+      <div class="categories-showcase">
+        <!-- Card 1: Empanadas -->
+        <article class="category-card">
+          <div class="category-thumb-wrap">
+            <img src="media/empanadas 01.jpg" alt="Caja de empanadas marcadas al horno con salsa">
+            <span class="category-badge-count">29 Variedades</span>
+          </div>
+          <div class="category-body">
+            <div>
+              <h3>Empanadas Marcadas</h3>
+              <p>
+                Cada variedad viene grabada a fuego con su nombre para que nunca dudes cuál es la tuya. Masa crocante, rellenos generosos y dip ranchero en el centro.
+              </p>
+              <div class="category-features-list">
+                <span>Carne a Cuchillo</span>
+                <span>Bondiola</span>
+                <span>Vacío & Provoleta</span>
+                <span>Matambre</span>
+                <span>Verdura Integral</span>
+              </div>
+            </div>
+            <button class="category-btn-action" onclick="filterByCat('empanadas')">
+              <span>Ver las 29 variedades</span>
+              <span>→</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: Pizzas -->
+        <article class="category-card">
+          <div class="category-thumb-wrap">
+            <img src="media/pizza01.jpg" alt="Pizza al horno con tomates cherry, aceitunas y hierbas">
+            <span class="category-badge-count">23 Variedades</span>
+          </div>
+          <div class="category-body">
+            <div>
+              <h3>Pizzas a la Piedra</h3>
+              <p>
+                Fermentación cuidada, salsa de tomates maduros, muzzarella abundante que funde a la perfección y combinaciones gourmet inolvidables.
+              </p>
+              <div class="category-features-list">
+                <span>Jamón Crudo & Rúcula</span>
+                <span>Panceta & Cheddar</span>
+                <span>Verdeo & Cherry</span>
+                <span>4 Quesos</span>
+              </div>
+            </div>
+            <button class="category-btn-action" onclick="filterByCat('pizzas')">
+              <span>Ver las 23 pizzas</span>
+              <span>→</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: Tartas -->
+        <article class="category-card">
+          <div class="category-thumb-wrap">
+            <img src="media/tartas.jpg" alt="Caja con tartas individuales doradas al horno">
+            <span class="category-badge-count">8 Variedades</span>
+          </div>
+          <div class="category-body">
+            <div>
+              <h3>Tartas Individuales</h3>
+              <p>
+                La porción justa y sustanciosa para tu almuerzo o cena. Disponibles en masa tradicional hojaldrada y opciones 100% integrales saludables.
+              </p>
+              <div class="category-features-list">
+                <span>Jamon y Queso</span>
+                <span>Capresse</span>
+                <span>Brócoli Integral</span>
+                <span>Calabaza</span>
+              </div>
+            </div>
+            <button class="category-btn-action" onclick="filterByCat('tartas')">
+              <span>Ver las 8 tartas</span>
+              <span>→</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Explorer Section (List Format) -->
+  <section class="menu-section" id="menu-completo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gold">Carta Oficial</span>
+        <h2 class="section-title">Explorá Todo Nuestro Menú</h2>
+        <p class="section-subtitle">
+          Hacé clic en "Pedir en Pedix" para solicitarlo de inmediato en nuestro portal oficial.
+        </p>
+      </div>
+
+      <!-- Controls: Search + Tabs + Pedix CTA -->
+      <div class="menu-filter-controls">
+        <div class="search-and-view-row">
+          <div class="menu-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="menu-search-input" placeholder="Buscar por gusto o ingrediente (ej. Roquefort, Carne, Integral)...">
+          </div>
+
+          <a href="https://pedix.app/fatto-al-forno" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-open-pedix-portal"
+             title="Abrir portal de Pedix">
+            <span>🛵 Ir a Pedix App</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="category-tabs-bar" role="tablist">
+          <button class="tab-btn active" data-cat="todas">
+            <span>Todas las opciones</span>
+            <span class="tab-count">68</span>
+          </button>
+          <button class="tab-btn" data-cat="empanadas">
+            <span>🥟 Empanadas</span>
+            <span class="tab-count">29</span>
+          </button>
+          <button class="tab-btn" data-cat="pizzas">
+            <span>🍕 Pizzas</span>
+            <span class="tab-count">23</span>
+          </button>
+          <button class="tab-btn" data-cat="tartas">
+            <span>🥧 Tartas Individuales</span>
+            <span class="tab-count">8</span>
+          </button>
+          <button class="tab-btn" data-cat="salsas">
+            <span>🥫 Dips & Salsas</span>
+            <span class="tab-count">8</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Disclaimer de Stock -->
+      <div class="menu-stock-disclaimer-wrap">
+        <div class="menu-stock-disclaimer">
+          <span class="disclaimer-star">*</span>
+          <span class="disclaimer-text">Verificar el stock disponible de las diferentes variedades en nuestro portal de Pedix.</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Menu List Container -->
+      <div class="menu-list-container" id="menu-list-container">
+        <!-- Rendered dynamically by main.js in gourmet list format -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dips & Sauces Section (El Secreto de FATTO) -->
+  <section class="sauces-section" id="salsas">
+    <div class="container">
+      <div class="sauces-grid">
+        <div class="sauces-banner-wrap">
+          <img src="media/Salsa (4).jpg" alt="Variedad de salsas y dips FATTO Don Antonio en potes">
+          <div class="sauces-badge-highlight">
+            <span class="cup-icon">🥫</span>
+            <div>
+              <h4>¡Dippeá como un profesional!</h4>
+              <p>Elegí todas tus variedades favoritas, combiná como quieras!</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag">El Secreto de la Casa</span>
+          <h2 class="section-title">8 Dips & Salsas Especiales</h2>
+          <p class="section-subtitle" style="margin-left: 0; margin-bottom: 28px;">
+            El toque distintivo que convierte cada bocado en una experiencia inolvidable. Descubrí el perfil de cada una:
+          </p>
+
+          <div class="sauces-list-cards">
+            <!-- Ranchera -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Ranchera</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(230,36,41,0.2); color:#ff6b6b;">★ La Estrella</span>
+                </div>
+                <p class="sauce-desc">Cremosa con hierbas y especias. La compañera perfecta de las empanadas de carne.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Cheddar -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Cheddar Fundido</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(255,170,41,0.2); color:var(--accent-gold);">Cremosa</span>
+                </div>
+                <p class="sauce-desc">Intenso queso cheddar sedoso, ideal para bordes de pizza y empanadas de pollo.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Honey Mustard -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Honey Mustard</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(241,196,15,0.2); color:#f1c40f;">Agridulce</span>
+                </div>
+                <p class="sauce-desc">Mostaza suave con miel pura. Resalta increíble con bondiola BBQ y pollo.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Chimichurri -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Chimichurri</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(46,204,113,0.2); color:#2ecc71;">Criollo</span>
+                </div>
+                <p class="sauce-desc">Macerado artesanal con hierbas y ají, fiel a la tradición argentina.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Barbacoa -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Barbacoa (BBQ)</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(192,57,43,0.2); color:#e74c3c;">Ahumada</span>
+                </div>
+                <p class="sauce-desc">Notas dulces y ahumadas profundas para amantes de los sabores intensos.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Ketchup Mexicano -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Ketchup Mexicano</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(231,76,60,0.2); color:#e74c3c;">Picante</span>
+                </div>
+                <p class="sauce-desc">Tomates maduros especiados con el golpe justo de ají para despertar sabores.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Tasty -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Salsa Tasty</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(230,126,34,0.2); color:#e67e22;">Gourmet</span>
+                </div>
+                <p class="sauce-desc">Emulsión especial estilo americana con pepinillo y especias secretas.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+
+            <!-- Criolla -->
+            <div class="sauce-flavor-card">
+              <div>
+                <div class="sauce-flavor-header">
+                  <span class="sauce-flavor-name">Criolla Clásica</span>
+                  <span class="sauce-flavor-badge" style="background: rgba(46,204,113,0.2); color:#2ecc71;">Fresca</span>
+                </div>
+                <p class="sauce-desc">Pimientos frescos, cebollita picada fina y vinagre equilibrado.</p>
+              </div>
+              <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="btn-sauce-pedix">Pedir en Pedix ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Atmosphere Section -->
+  <section class="location-section" id="local">
+    <div class="container">
+      <div class="store-card-container">
+        <div class="store-image-wrap">
+          <img src="media/fachada.jpg" alt="Fachada iluminada del local FATTO Al Forno de noche">
+          <div class="store-overlay-pill">
+            <span class="pulse-dot"></span>
+            <span>Abierto Turno Noche y Mediodía</span>
+          </div>
+        </div>
+
+        <div class="store-content">
+          <span class="section-tag">Visitanos o Pedí a Domicilio</span>
+          <h3>Nuestro Local</h3>
+          <p>
+            Te esperamos con el horno a pleno y el mejor ambiente para retirar tu pedido o recibirlo caliente en tu puerta mediante nuestro portal de Pedix.
+          </p>
+
+          <div class="store-meta-grid">
+            <div class="store-meta-item">
+              <div class="meta-icon">📍</div>
+              <div class="meta-text">
+                <h5>Ubicación</h5>
+                <p> 9 de julio 787, Concepcion del Uruguay, Entre Rios</p>
+              </div>
+            </div>
+
+            <div class="store-meta-item">
+              <div class="meta-icon">🛵</div>
+              <div class="meta-text">
+                <h5>Servicios</h5>
+                <p>Delivery & Take Away</p>
+              </div>
+            </div>
+
+            <div class="store-meta-item">
+              <div class="meta-icon">📲</div>
+              <div class="meta-text">
+                <h5>WhatsApp Consultas</h5>
+                <p>+54 9 3442 330423</p>
+              </div>
+            </div>
+
+            <div class="store-meta-item">
+              <div class="meta-icon">📸</div>
+              <div class="meta-text">
+                <h5>Instagram Oficial</h5>
+                <p>@fatto_al_forno</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="store-cta-buttons">
+            <a href="https://pedix.app/fatto-al-forno" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-primary">
+              <span>Hacer Pedido en Pedix</span>
+              <span>→</span>
+            </a>
+
+            <a href="https://instagram.com/fatto_al_forno" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-secondary">
+              <span>Seguir en Instagram</span>
+            </a>
+
+            <a href="https://wa.me/543442330423" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-secondary">
+              <span>Consultas WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-text-logo">
+            <span class="brand-title logo-main" style="font-size: 2.2rem;">FATTO</span>
+            <span class="brand-script logo-sub" style="font-size: 1.5rem;">- Al Forno -</span>
+          </div>
+          <p>
+            🔥 Velocidad, Calidad y Gourmet! Descubrí la auténtica experiencia de horno artesanal con empanadas de autor, pizzas a la piedra y dips exclusivos.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://pedix.app/fatto-al-forno" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Portal Pedix" title="Pedir en Pedix">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+              </svg>
+            </a>
+
+            <a href="https://instagram.com/fatto_al_forno" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <a href="https://wa.me/543442330423" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.7945 4.21258C17.7267 2.14211 14.9765 1.00129 12.0462 1.00024C6.00812 1.00024 1.09402 5.91382 1.09192 11.9535C1.09087 13.8842 1.59562 15.7688 2.55417 17.4296L1 23.1063L6.807 21.5831C8.40685 22.4561 10.2084 22.9157 12.0415 22.9162H12.0462C18.0832 22.9162 22.9979 18.0021 23 11.9624C23.001 9.03532 21.8628 6.28359 19.7945 4.21311V4.21258ZM12.0462 21.0663H12.0425C10.409 21.0658 8.80658 20.6267 7.40842 19.7973L7.07592 19.5999L3.62986 20.5038L4.54954 17.1438L4.33314 16.7993C3.42186 15.3497 2.94022 13.6741 2.94127 11.954C2.94337 6.93435 7.0276 2.85012 12.0499 2.85012C14.4817 2.85117 16.7676 3.79922 18.4866 5.52042C20.2058 7.24109 21.1517 9.52903 21.1507 11.9614C21.1485 16.9816 17.0643 21.0658 12.0462 21.0658V21.0663ZM17.0401 14.2477C16.7665 14.1107 15.4209 13.4488 15.1698 13.3575C14.9187 13.266 14.7365 13.2204 14.5542 13.4945C14.372 13.7687 13.8473 14.3854 13.6876 14.5676C13.5279 14.7504 13.3682 14.773 13.0946 14.6358C12.821 14.4988 11.9391 14.2099 10.8933 13.2776C10.0798 12.5517 9.53032 11.6557 9.3707 11.3815C9.21101 11.1073 9.35389 10.9592 9.49041 10.8232C9.61331 10.7003 9.76407 10.5033 9.90114 10.3436C10.0383 10.184 10.0834 10.0695 10.1748 9.88721C10.2662 9.70442 10.2205 9.5448 10.1522 9.40767C10.0839 9.27059 9.53667 7.92334 9.30818 7.37554C9.08598 6.84191 8.86017 6.91439 8.69261 6.90547C8.53292 6.89758 8.35069 6.89601 8.16791 6.89601C7.98512 6.89601 7.68886 6.96429 7.43781 7.23847C7.18677 7.51261 6.47978 8.17493 6.47978 9.52164C6.47978 10.8683 7.46042 12.1704 7.59749 12.3532C7.73457 12.536 9.52769 15.3003 12.2731 16.4863C12.926 16.7683 13.436 16.9369 13.8336 17.063C14.4891 17.2715 15.0857 17.2421 15.5574 17.1717C16.0832 17.0929 17.1767 16.5094 17.4047 15.8702C17.6326 15.2309 17.6326 14.6826 17.5644 14.5686C17.4961 14.4546 17.3133 14.3858 17.0396 14.2488L17.0401 14.2477Z"/>
+              </svg>
+            </a>
+
+            <a href="https://linktr.ee/FATTO.AL.FORNO" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Linktree">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="m15.7603 6.829 4.6725-4.80317 2.712 2.77734-4.9012 4.67248h6.8944v3.85565h-6.9271l4.9339 4.7922-2.712 2.7229-6.6983-6.731-6.69829 6.731-2.712-2.712 4.93387-4.7923h-6.92703v-3.86645h6.89436l-4.9012-4.67248 2.712-2.77734 4.67249 4.80317v-6.829h4.0516zm-4.0516 12.0243h4.0516v9.1489h-4.0516z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#menu-completo">Carta Completa</a></li>
+            <li><a href="#salsas">Salsas & Dips</a></li>
+            <li><a href="#local">Nuestro Local</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Nuestra Carta</h4>
+          <ul>
+            <li><a href="#menu-completo" onclick="filterByCat('empanadas')">Empanadas (29 tipos)</a></li>
+            <li><a href="#menu-completo" onclick="filterByCat('pizzas')">Pizzas (23 tipos)</a></li>
+            <li><a href="#menu-completo" onclick="filterByCat('tartas')">Tartas Individuales</a></li>
+            <li><a href="#menu-completo" onclick="filterByCat('salsas')">Dips & Salsas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pedidos & Contacto</h4>
+          <ul>
+            <li><a href="https://pedix.app/fatto-al-forno" target="_blank" style="color: var(--primary-red-light); font-weight: 700;">Hacer Pedido en Pedix ↗</a></li>
+            <li><a href="https://wa.me/543442330423" target="_blank">WhatsApp: 3442 330423</a></li>
+            <li><a href="tel:3442330423">Teléfono: 3442 330423</a></li>
+            <li><a href="https://instagram.com/fatto_al_forno" target="_blank">Instagram: @fatto_al_forno</a></li>
+            <li><span style="color: var(--text-dim);">9 DE JULIO 787, CONCEPCIÓN DEL URUGUAY, ENTRE RÍOS</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 FATTO - Al Forno -. Todos los derechos reservados.</p>
+        <p>Velocidad, Calidad y Gourmet 🔥 | Pedidos por Pedix</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button (Arriba a la derecha) -->
+  <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Volver arriba" title="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
