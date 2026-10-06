@@ -4,7 +4,7 @@
    Exclusively integrated with Pedix portal (https://pedix.app/fatto-al-forno)
    =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Damion&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Rye&family=Syne:wght@700;800&family=Yellowtail&display=swap');
 
 :root {
   /* Color Palette */
@@ -36,6 +36,8 @@
   /* Fonts */
   --font-heading: 'Syne', sans-serif;
   --font-display: 'Bebas Neue', sans-serif;
+  --font-logo: 'Rye', 'Ultra', serif;
+  --font-logo-script: 'Damion', 'Yellowtail', 'Caveat', cursive;
   --font-script: 'Caveat', cursive;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   
@@ -284,23 +286,33 @@ ul {
 }
 
 .brand-text-logo {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.brand-text-logo .logo-main {
-  font-family: var(--font-display);
+.brand-logo-wrap:hover .brand-text-logo {
+  transform: rotate(-3deg) scale(1.04);
+}
+
+.brand-text-logo .logo-main,
+.brand-text-logo .brand-title {
+  font-family: var(--font-logo);
   font-size: 1.85rem;
-  line-height: 0.9;
-  letter-spacing: 2px;
+  line-height: 0.88;
+  letter-spacing: 1.5px;
 }
 
-.brand-text-logo .logo-sub {
-  font-family: var(--font-script);
-  font-size: 1.25rem;
+.brand-text-logo .logo-sub,
+.brand-text-logo .brand-script {
+  font-family: var(--font-logo-script);
+  font-size: 1.3rem;
   color: var(--primary-red-light);
   line-height: 1;
-  margin-top: -2px;
+  margin-top: 1px;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -537,9 +549,13 @@ ul {
 }
 
 .hero-title .title-accent {
-  background: linear-gradient(135deg, #ffffff 40%, var(--primary-red-light) 90%);
+  display: inline-block;
+  color: var(--primary-red-light);
+  background: linear-gradient(180deg, #ffffff 15%, #ff5258 75%, #ff3b42 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(230, 36, 41, 0.45));
 }
 
 .hero-title .script-accent {

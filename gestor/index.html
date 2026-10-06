@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FATTO - Gestor de Variedades del Menú</title>
+  
+  <link rel="icon" type="image/jpeg" href="../media/logo.jpg">
+  
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Rye&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Manager Stylesheet -->
+  <link rel="stylesheet" href="gestor.css">
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-wrap">
+        <a href="../index.html" class="brand-link" title="Ir al sitio principal">
+          <div class="brand-text-logo">
+            <span class="logo-main">FATTO</span>
+            <span class="logo-sub">- Al Forno -</span>
+          </div>
+        </a>
+        <div class="brand-divider"></div>
+        <div class="app-title-wrap">
+          <h1 class="app-title">Gestor de Variedades</h1>
+          <span class="app-subtitle">Control de stock y visibilidad en tiempo real</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="../index.html" target="_blank" rel="noopener" class="btn-preview-site" title="Abrir página web en nueva pestaña">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>Ver Menú Principal</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Instructions & Realtime Alert -->
+      <section class="banner-notice">
+        <div class="banner-icon">⚡</div>
+        <div class="banner-body">
+          <h3>Sincronización instantánea con la web principal</h3>
+          <p>
+            Al activar o desactivar cualquier variedad, el cambio se guarda automáticamente y se aplica de inmediato en el menú de la página de inicio. Si tenés la página abierta en otra pestaña, se actualizará sola sin recargar.
+          </p>
+        </div>
+      </section>
+
+      <!-- KPI Summary Cards -->
+      <section class="kpi-grid">
+        <div class="kpi-card total">
+          <div class="kpi-icon">📋</div>
+          <div class="kpi-data">
+            <span class="kpi-number" id="kpi-total">68</span>
+            <span class="kpi-label">Total de Variedades</span>
+          </div>
+        </div>
+
+        <div class="kpi-card visible">
+          <div class="kpi-icon">🟢</div>
+          <div class="kpi-data">
+            <span class="kpi-number" id="kpi-visible">68</span>
+            <span class="kpi-label">Visibles en la Carta</span>
+          </div>
+        </div>
+
+        <div class="kpi-card hidden">
+          <div class="kpi-icon">🔴</div>
+          <div class="kpi-data">
+            <span class="kpi-number" id="kpi-hidden">0</span>
+            <span class="kpi-label">Ocultas (Sin Stock / Agotadas)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Controls Toolbar -->
+      <section class="toolbar-card">
+        <div class="toolbar-top">
+          <!-- Search Box -->
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" placeholder="Buscar variedad por nombre, ingrediente o sabor (ej. Roquefort, Brócoli)...">
+            <button id="clear-search-btn" class="btn-clear-search" style="display:none;" title="Limpiar búsqueda">✕</button>
+          </div>
+
+          <!-- Status Filter -->
+          <div class="status-filter-wrap">
+            <label for="status-filter" class="filter-label">Estado:</label>
+            <select id="status-filter" class="select-filter">
+              <option value="todos">Todos los estados</option>
+              <option value="visibles">Solo Visibles</option>
+              <option value="ocultos">Solo Ocultos / Agotados</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs" role="tablist">
+          <button class="cat-tab active" data-cat="todas">
+            <span>Todas</span>
+            <span class="badge-count" id="tab-count-todas">68</span>
+          </button>
+          <button class="cat-tab" data-cat="empanadas">
+            <span>🥟 Empanadas</span>
+            <span class="badge-count" id="tab-count-empanadas">29</span>
+          </button>
+          <button class="cat-tab" data-cat="pizzas">
+            <span>🍕 Pizzas</span>
+            <span class="badge-count" id="tab-count-pizzas">23</span>
+          </button>
+          <button class="cat-tab" data-cat="tartas">
+            <span>🥧 Tartas</span>
+            <span class="badge-count" id="tab-count-tartas">8</span>
+          </button>
+          <button class="cat-tab" data-cat="salsas">
+            <span>🥫 Dips & Salsas</span>
+            <span class="badge-count" id="tab-count-salsas">8</span>
+          </button>
+        </div>
+
+        <!-- Bulk Action Buttons -->
+        <div class="bulk-actions-row">
+          <div class="bulk-actions-left">
+            <button id="btn-show-all-cat" class="btn-action-sm btn-show" title="Hacer visibles todas las variedades mostradas en este filtro">
+              <span>👁️ Mostrar visibles en esta categoría</span>
+            </button>
+            <button id="btn-hide-all-cat" class="btn-action-sm btn-hide" title="Ocultar todas las variedades mostradas en este filtro">
+              <span>🚫 Ocultar en esta categoría</span>
+            </button>
+          </div>
+
+          <div class="bulk-actions-right">
+            <button id="btn-reset-all" class="btn-action-sm btn-reset" title="Restablecer todas las variedades del menú como visibles">
+              <span>🔄 Restablecer todo a Visible</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Varieties Grid / List Container -->
+      <section class="items-section">
+        <div class="items-header">
+          <h2 class="items-title" id="items-header-title">Listado de Variedades (68)</h2>
+          <span class="items-hint">Usa el interruptor para ocultar o mostrar cada producto en la web</span>
+        </div>
+
+        <div id="items-grid" class="items-grid">
+          <!-- Dynamically populated by gestor.js -->
+        </div>
+
+        <div id="no-results" class="no-results" style="display: none;">
+          <div class="no-results-icon">🔎</div>
+          <h3>No se encontraron variedades</h3>
+          <p>Probá cambiando el texto de búsqueda o el filtro de categoría seleccionado.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Menu Data & Gestor Script -->
+  <script src="../js/menu-data.js"></script>
+  <script src="gestor.js"></script>
+</body>
+</html>

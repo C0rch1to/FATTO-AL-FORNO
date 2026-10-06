@@ -13,6 +13,11 @@
   
   <link rel="icon" type="image/jpeg" href="media/logo.jpg">
   
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Damion&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Rye&family=Syne:wght@700;800&family=Yellowtail&display=swap" rel="stylesheet">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -426,7 +431,7 @@
 
           <div class="sauces-list-cards">
             <!-- Ranchera -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-ranchera">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Ranchera</span>
@@ -438,7 +443,7 @@
             </div>
 
             <!-- Cheddar -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-cheddar">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Cheddar Fundido</span>
@@ -450,7 +455,7 @@
             </div>
 
             <!-- Honey Mustard -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-honey-mustard">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Honey Mustard</span>
@@ -462,7 +467,7 @@
             </div>
 
             <!-- Chimichurri -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-chimichurri">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Chimichurri</span>
@@ -474,7 +479,7 @@
             </div>
 
             <!-- Barbacoa -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-barbacoa">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Barbacoa (BBQ)</span>
@@ -486,7 +491,7 @@
             </div>
 
             <!-- Ketchup Mexicano -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-ketchup-mexicano">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Ketchup Mexicano</span>
@@ -498,7 +503,7 @@
             </div>
 
             <!-- Tasty -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-tasty">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Salsa Tasty</span>
@@ -510,7 +515,7 @@
             </div>
 
             <!-- Criolla -->
-            <div class="sauce-flavor-card">
+            <div class="sauce-flavor-card" data-id="sal-criolla">
               <div>
                 <div class="sauce-flavor-header">
                   <span class="sauce-flavor-name">Criolla Clásica</span>
@@ -692,6 +697,9 @@
       <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
   </button>
+
+  <!-- Central Menu Database -->
+  <script src="js/menu-data.js"></script>
 
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
